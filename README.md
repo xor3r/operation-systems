@@ -6,4 +6,6 @@
 2. Run __mysql-setup.sh__ on your server.
 3. Run __java-project-setup.sh__ on your server.
 4. Run __prometheus-setup.sh__ on your server.
-5. Run __grafana-setup.sh__ on your local machine / dedicated VM.
+5. Run __grafana-setup.sh__ on your local machine / dedicated VM with __sudo__ rights.
+
+I suggest to use Grafana dashboards #1860 and #4701.
