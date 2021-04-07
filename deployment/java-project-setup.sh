@@ -1,5 +1,5 @@
 sudo apt-get install -y git default-jre default-jdk maven
-git clone https://github.com/damoklov/spring-jpa-iot.git /home/server/
+git clone https://github.com/damoklov/spring-jpa-iot.git /home/server/spring-jpa-iot
 
 export MYSQL_PWD=123456
 
