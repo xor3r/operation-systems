@@ -9,7 +9,7 @@ export MYSQL_PWD=123456
 cd /home/server/spring-jpa-iot/
 mvn install
 mvn clean package
-timeout 15s mvn spring-boot:run
+timeout 30s mvn spring-boot:run
 
 /usr/bin/mysql -u root pazyniuk_jpa < /home/server/spring-jpa-iot/src/main/resources/inserts.sql
 
