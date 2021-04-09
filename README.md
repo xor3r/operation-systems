@@ -9,3 +9,11 @@
 5. Run __grafana-setup.sh__ on your local machine / dedicated VM with __sudo__ rights.
 
 I suggest to use Grafana dashboards #1860 and #4701.
+
+## POC
+
+![grafana-1](/img/grafana-1.PNG)
+
+--- 
+
+![grafana-2](/img/grafana-2.PNG)
