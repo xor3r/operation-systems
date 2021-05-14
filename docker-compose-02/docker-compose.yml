@@ -1,0 +1,8 @@
+version: '3'
+services:
+  grafana:
+    image: "grafana/grafana:latest"
+    restart: on-failure
+    ports:
+      - 3000:3000
+
