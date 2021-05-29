@@ -5,14 +5,14 @@ MYSQL_ROOT_PASSWORD='123456' # SET THIS! Avoid quotes/apostrophes in the passwor
 
 # Install MySQL
 # Suggestion from @dcarrith (http://serverfault.com/a/830352/344471):
-echo debconf mysql-server/root_password password $MYSQL_ROOT_PASSWORD | sudo debconf-set-selections
-echo debconf mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD | sudo debconf-set-selections
+echo debconf mysql-server/root_password password $MYSQL_ROOT_PASSWORD | debconf-set-selections
+echo debconf mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD | debconf-set-selections
 #sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
 #sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
-sudo apt-get -qq install mysql-server > /dev/null # Install MySQL quietly
+apt-get -qq install mysql-server > /dev/null # Install MySQL quietly
 
 # Install Expect
-sudo apt-get -qq install expect > /dev/null
+apt-get -qq install expect > /dev/null
 
 # Build Expect script
 tee ~/secure_our_mysql.sh > /dev/null << EOF
@@ -46,7 +46,7 @@ EOF
 
 # Run Expect script.
 # This runs the "mysql_secure_installation" script which removes insecure defaults.
-sudo expect ~/secure_our_mysql.sh
+expect ~/secure_our_mysql.sh
 
 # Cleanup
 rm -v ~/secure_our_mysql.sh # Remove the generated Expect script
